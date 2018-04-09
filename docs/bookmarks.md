@@ -1,3 +1,10 @@
+- modules aka "task plugin" aka "library plugin"
+```bash
+ansible-doc -l
+ansible-doc ping
+ansible -m ping -a "data=punk" -i hosts -u ansible webserver
+```
+
 - une machine peut être dans plrs groupes 
 
 ```bash
