@@ -1,3 +1,19 @@
+- groupe all 
+
+```bash
+ansible -m ping -i hosts -u ansible all
+```
+
+- tester la connexion à arch1
+
+```bash
+ansible -m ping -i hosts -u ansible arch1
+```
+
+- l'inventaire est un fichier ini (illisible) ou YAML
+
+- ansible est un outil qui fait exactement ça
+
 - on peut "automatiser" :
 
 ```pseudo-shell
@@ -23,8 +39,9 @@ et pareil pour `arch2`
   
       Bonjour je suis <addresse ip>.
         
-- il y a 2 machines : arch1 et arch2
-
+- il y a 2 machines : arch1 et arch2 
+  - python
+  - openssh
 
  
 
