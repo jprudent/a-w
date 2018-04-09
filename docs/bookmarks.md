@@ -1,4 +1,12 @@
+- module copy
+
+```bash
+ansible -m copy -a "src=templates/bonjour dest=/tmp/bonjour" -i hosts -u ansible archlinux
+ssh arch1
+```
+
 - modules aka "task plugin" aka "library plugin"
+
 ```bash
 ansible-doc -l
 ansible-doc ping
