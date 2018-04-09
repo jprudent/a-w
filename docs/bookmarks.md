@@ -1,3 +1,9 @@
+- une machine peut être dans plrs groupes 
+
+```bash
+ansible -m ping -i hosts -u ansible webserver
+```
+
 - création de groupe `webserver` et `load-balancer`
 
 ```bash
