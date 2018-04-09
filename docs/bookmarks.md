@@ -1,3 +1,9 @@
+- création de groupe `webserver` et `load-balancer`
+
+```bash
+ansible -m ping -i hosts -u ansible webserver
+ansible -m ping -i hosts -u ansible load-balancer
+```
 - groupe all 
 
 ```bash
