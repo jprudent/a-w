@@ -54,9 +54,7 @@ ansible -m ping -i hosts -u ansible arch1
 ```pseudo-shell
 for host in ./host-file:
   scp script.sh ansible@$host:/tmp
-  ssh ansible@$host "exec /tmp/script.sh > /tmp/script.out"
-  scp ansible@$host:/tmp/script.out /tmp
-  cat /tmp/script.out
+  ssh ansible@$host "exec /tmp/script.sh"
 ```
 - par ssh :
 
