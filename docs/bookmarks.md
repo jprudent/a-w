@@ -1,3 +1,11 @@
+- gather facts (module setup)
+
+```
+ansible -m setup -i hosts -u ansible arch1
+```
+
+utiliser `ansible_default_ipv4.address`
+
 - module copy
 
 ```bash
