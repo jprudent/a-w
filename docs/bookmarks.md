@@ -1,7 +1,13 @@
+- un playbook est une liste de play (un recueil de pièces de théâtre)
+
+```
+ansible-playbook bonjour_1.yml -i hosts.yml -u ansible arch1
+```
+
 - gather facts (module setup)
 
 ```
-ansible -m setup -i hosts -u ansible arch1
+ansible -m setup -i hosts.yml -u ansible arch1
 ```
 
 utiliser `ansible_facts.ansible_default_ipv4.address`
@@ -9,7 +15,7 @@ utiliser `ansible_facts.ansible_default_ipv4.address`
 - module copy
 
 ```bash
-ansible -m copy -a "src=templates/bonjour dest=/tmp/bonjour" -i hosts -u ansible archlinux
+ansible -m copy -a "src=templates/bonjour dest=/tmp/bonjour" -i hosts.yml -u ansible archlinux
 ssh arch1
 ```
 
@@ -18,31 +24,31 @@ ssh arch1
 ```bash
 ansible-doc -l
 ansible-doc ping
-ansible -m ping -a "data=punk" -i hosts -u ansible webserver
+ansible -m ping -a "data=punk" -i hosts.yml -u ansible webserver
 ```
 
 - une machine peut être dans plrs groupes 
 
 ```bash
-ansible -m ping -i hosts -u ansible webserver
+ansible -m ping -i hosts.yml -u ansible webserver
 ```
 
 - création de groupe `webserver` et `load-balancer`
 
 ```bash
-ansible -m ping -i hosts -u ansible webserver
-ansible -m ping -i hosts -u ansible load-balancer
+ansible -m ping -i hosts.yml -u ansible webserver
+ansible -m ping -i hosts.yml -u ansible load-balancer
 ```
 - groupe all 
 
 ```bash
-ansible -m ping -i hosts -u ansible all
+ansible -m ping -i hosts.yml -u ansible all
 ```
 
 - tester la connexion à arch1
 
 ```bash
-ansible -m ping -i hosts -u ansible arch1
+ansible -m ping -i hosts.yml -u ansible arch1
 ```
 
 - l'inventaire est un fichier ini (illisible) ou YAML
