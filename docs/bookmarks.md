@@ -1,3 +1,12 @@
+- Templates 
+
+```
+ansible-playbook bonjour_2.yml -i hosts.yml -u ansible arch1
+```
+
+http://jinja.pocoo.org/docs/2.10/templates/
+(essayer 2/3 trucs: if, for, comments, macros)
+
 - What's this "Gathering facts" ?
 + module debug
 ```

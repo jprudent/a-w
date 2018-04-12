@@ -1,0 +1,11 @@
+---
+- hosts: archlinux
+  #gather_facts: true
+  tasks:
+    - name: Print IP address
+      debug:
+        var: ansible_facts.default_ipv4.address
+    - name: Copy bonjour file
+      template:
+        src: bonjour.j2
+        dest: /tmp/bonjour
