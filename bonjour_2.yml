@@ -1,0 +1,7 @@
+---
+- hosts: archlinux
+  #gather_facts: true
+  tasks:
+    - name: Print IP address
+      debug:
+        var: ansible_facts.default_ipv4.address

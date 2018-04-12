@@ -1,3 +1,9 @@
+- What's this "Gathering facts" ?
++ module debug
+```
+ansible-playbook bonjour_2.yml -i hosts.yml -u ansible arch1
+```
+
 - un playbook est une liste de play (un recueil de pièces de théâtre)
 
 ```
