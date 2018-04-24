@@ -1,0 +1,8 @@
+---
+- hosts: archlinux
+  tasks:
+    - include_role:
+        name: bonjour
+      vars:
+        filename: include_role
+        hello: ze end

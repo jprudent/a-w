@@ -1,0 +1,8 @@
+---
+# handlers file for bonjour
+- name: Read file
+  command: "cat /tmp/{{ filename }}"
+  register: file_content
+- name: Print file content
+  debug:
+    var: file_content.stdout

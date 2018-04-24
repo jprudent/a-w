@@ -1,0 +1,4 @@
+---
+# defaults file for bonjour
+filename: bonjour.default
+hello: Des faux
