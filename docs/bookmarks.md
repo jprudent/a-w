@@ -1,3 +1,9 @@
+- Handlers
+
+```
+ansible-playbook bonjour_8.yml --inventory hosts.yml --user ansible
+```
+
 - Vault
 
 ```
