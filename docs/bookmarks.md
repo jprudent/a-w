@@ -1,9 +1,15 @@
+- Variables (var:)
+
+```
+ansible-playbook bonjour_5.yml --inventory hosts.yml --user ansible
+```
+
+
 - Variables (-e)
 
 ```
 ansible-playbook bonjour_4.yml --inventory hosts.yml --user ansible --extra-vars="filename=custom_var_filename hello=Hi"
 ansible -m shell -a "cat /tmp/custom_var_filename" -i hosts.yml -u ansible arch1
-
 ```
 
 - Templates 
