@@ -1,0 +1,25 @@
+---
+- hosts: archlinux
+  tasks:
+    - name: variable with register
+      command: uname -r
+      register: uname_res
+
+    - name: variables with set_facts
+      set_fact:
+        hello: "{{ uname_res.stdout }}"
+        filename: "{{ uname_res.stdout | shuffle | join('')}}"
+
+    - name: Print IP address
+      debug:
+        var: ansible_facts.all_ipv4_addresses[0]
+    - name: Print hello
+      debug:
+        var: hello
+    - name: Print filename
+      debug:
+        var: filename
+    - name: Copy bonjour file
+      template:
+        src: bonjour_var.j2
+        dest: "/tmp/{{ filename }}"

@@ -1,3 +1,11 @@
+
+
+- Variables set_fact and register
+
+```
+ansible-playbook bonjour_7.yml --inventory hosts.yml --user ansible
+```
+ 
 - Variables Inventory
 
 ```
