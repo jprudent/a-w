@@ -1,3 +1,9 @@
+- Variables (host_vars/group_vars)
+
+```
+ansible-playbook bonjour_4.yml --inventory hosts.yml --user ansible
+```
+
 - Variables (vars_file:)
 ```
 ansible-playbook bonjour_6.yml --inventory hosts.yml --user ansible
