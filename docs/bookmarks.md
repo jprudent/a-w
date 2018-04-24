@@ -1,3 +1,11 @@
+- Variables (-e)
+
+```
+ansible-playbook bonjour_4.yml --inventory hosts.yml --user ansible --extra-vars="filename=custom_var_filename hello=Hi"
+ansible -m shell -a "cat /tmp/custom_var_filename" -i hosts.yml -u ansible arch1
+
+```
+
 - Templates 
 
 ```
@@ -13,7 +21,7 @@ http://jinja.pocoo.org/docs/2.10/templates/
 ansible-playbook bonjour_2.yml -i hosts.yml -u ansible arch1
 ```
 
-- un playbook est une liste de play (un recueil de pièces de théâtre)
+- un playbook est une liste de "play" (https://www.merriam-webster.com/dictionary/playbook)
 
 ```
 ansible-playbook bonjour_1.yml -i hosts.yml -u ansible arch1

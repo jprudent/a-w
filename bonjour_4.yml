@@ -1,0 +1,16 @@
+---
+- hosts: archlinux
+  tasks:
+    - name: Print IP address
+      debug:
+        var: ansible_facts.all_ipv4_addresses[0]
+    - name: Print hello
+      debug:
+        var: hello
+    - name: Print filename
+      debug:
+        var: filename
+    - name: Copy bonjour file
+      template:
+        src: bonjour_var.j2
+        dest: "/tmp/{{ filename }}"
