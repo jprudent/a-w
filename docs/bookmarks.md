@@ -1,4 +1,9 @@
+- Vault
 
+```
+ansible-vault create group_vars/all.yml
+ansible-playbook bonjour_4.yml --inventory hosts.yml --user ansible --ask-vault-pass -e "filename=hello.secret"
+```
 
 - Variables set_fact and register
 
