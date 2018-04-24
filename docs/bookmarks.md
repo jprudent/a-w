@@ -1,3 +1,9 @@
+- Variables (vars_file:)
+```
+ansible-playbook bonjour_6.yml --inventory hosts.yml --user ansible
+```
+
+
 - Variables (var:)
 
 ```
@@ -6,7 +12,7 @@ ansible-playbook bonjour_5.yml --inventory hosts.yml --user ansible
 
 
 - Variables (-e)
-
+https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable
 ```
 ansible-playbook bonjour_4.yml --inventory hosts.yml --user ansible --extra-vars="filename=custom_var_filename hello=Hi"
 ansible -m shell -a "cat /tmp/custom_var_filename" -i hosts.yml -u ansible arch1
